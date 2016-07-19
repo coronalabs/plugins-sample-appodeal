@@ -1,0 +1,92 @@
+--
+-- For more information on build.settings see the Corona SDK Build Guide at:
+-- http://docs.coronalabs.com/guide/distribution/buildSettings/index.html
+--
+
+settings =
+{
+	orientation = {
+		default = "landscapeLeft",
+		supported = { "landscapeLeft", "landscapeRight" }
+	},
+
+	iphone =
+	{
+		plist =
+		{
+			CFBundleIconFiles =
+			{
+				"Icon.png", 
+				"Icon@2x.png", 
+				"Icon-60.png",
+				"Icon-60@2x.png",
+				"Icon-60@3x.png",
+				"Icon-72.png", 
+				"Icon-72@2x.png",
+				"Icon-76.png",
+				"Icon-76@2x.png",
+				"Icon-167.png",
+				"Icon-Small.png", 
+				"Icon-Small@2x.png",
+				"Icon-Small@3x.png",
+				"Icon-Small-40.png",
+				"Icon-Small-40@2x.png",
+				"Icon-Small-50.png", 
+				"Icon-Small-50@2x.png",
+			},
+			NSAppTransportSecurity =
+			{
+				NSAllowsArbitraryLoads = true
+			},
+		},
+	},
+
+	tvos =
+	{
+		icon =
+		{
+			small =
+			{
+				"Icon-tvOS-Small-LogoA.png",
+				"Icon-tvOS-Small-LogoB.png",
+				"Icon-tvOS-Small-Background.png"
+			},
+			large =
+			{
+				"Icon-tvOS-Large-LogoA.png",
+				"Icon-tvOS-Large-LogoB.png",
+				"Icon-tvOS-Large-Background.png"
+			}
+		},
+		topShelfImage = "Icon-tvOS-TopShelf.png",
+		launchImage = "Icon-tvOS-Launch.png"
+	},
+
+	excludeFiles =
+	{
+		iphone = { "Icon-tvOS*.png" },
+		android = { "Icon-tvOS*.png" }
+	},
+
+	window =
+	{
+		titleText =
+		{
+			default = "Appodeal",
+		},
+	},
+
+	plugins =
+	{
+		["plugin.appodeal"] =
+        {
+            publisherId = "com.coronalabs",
+            supportedPlatforms = { iphone=true, android=true, tvos=true }
+        },
+		["plugin.google.play.services"] =
+        {
+            publisherId = "com.coronalabs",
+            supportedPlatforms = { android=true }
+        },
+	},
+}
