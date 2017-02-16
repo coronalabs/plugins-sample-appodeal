@@ -16,23 +16,15 @@ settings =
 		{
 			CFBundleIconFiles =
 			{
-				"Icon.png", 
-				"Icon@2x.png", 
-				"Icon-60.png",
-				"Icon-60@2x.png",
-				"Icon-60@3x.png",
-				"Icon-72.png", 
-				"Icon-72@2x.png",
+				"Icon-40.png",
+				"Icon-58.png",
 				"Icon-76.png",
-				"Icon-76@2x.png",
+				"Icon-80.png",
+				"Icon-87.png",
+				"Icon-120.png",
+				"Icon-152.png",
 				"Icon-167.png",
-				"Icon-Small.png", 
-				"Icon-Small@2x.png",
-				"Icon-Small@3x.png",
-				"Icon-Small-40.png",
-				"Icon-Small-40@2x.png",
-				"Icon-Small-50.png", 
-				"Icon-Small-50@2x.png",
+				"Icon-180.png",
 			},
 			NSAppTransportSecurity =
 			{
@@ -59,6 +51,7 @@ settings =
 			}
 		},
 		topShelfImage = "Icon-tvOS-TopShelf.png",
+		topShelfImageWide = "Icon-tvOS-TopShelfWide.png",
 		launchImage = "Icon-tvOS-Launch.png"
 	},
 
@@ -80,13 +73,7 @@ settings =
 	{
 		["plugin.appodeal"] =
         {
-            publisherId = "com.coronalabs",
-            supportedPlatforms = { iphone=true, android=true, tvos=true }
-        },
-		["plugin.google.play.services"] =
-        {
-            publisherId = "com.coronalabs",
-            supportedPlatforms = { android=true }
-        },
+            publisherId = "com.coronalabs"
+        }
 	},
 }
