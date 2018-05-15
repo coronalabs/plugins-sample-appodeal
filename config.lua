@@ -1,19 +1,16 @@
+--
+-- For more information on config.lua see the Project Configuration Guide at:
+-- https://docs.coronalabs.com/guide/basics/configSettings
+--
 
-application = 
+application =
 {
-	content = 
+	content =
 	{
-		fps = 60,
 		width = 320,
 		height = 480,
+		--scale = "zoomEven",
 		scale = "letterbox",
-		xAlign = "center",
-		yAlign = "center",
-
-		imageSuffix =
-		{
-			["@2x"] = 2.000,
-			["@4x"] = 4.000
-		}
-	}
+		-- scale = "none",
+	},
 }

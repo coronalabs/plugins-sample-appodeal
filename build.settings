@@ -1,79 +1,49 @@
 --
--- For more information on build.settings see the Corona SDK Build Guide at:
+-- For more information on build.settings see the Corona Build Guide at:
 -- http://docs.coronalabs.com/guide/distribution/buildSettings/index.html
 --
 
 settings =
 {
-	orientation = {
-		default = "landscapeLeft",
-		supported = { "landscapeLeft", "landscapeRight" }
+	orientation =
+	{
+		default = "portrait",
+		supported = { "portrait", "landscapeRight" }
 	},
 
 	iphone =
 	{
+		xcassets = "Images.xcassets",
 		plist =
 		{
-			CFBundleIconFiles =
-			{
-				"Icon-40.png",
-				"Icon-58.png",
-				"Icon-76.png",
-				"Icon-80.png",
-				"Icon-87.png",
-				"Icon-120.png",
-				"Icon-152.png",
-				"Icon-167.png",
-				"Icon-180.png",
-			},
-			NSAppTransportSecurity =
-			{
-				NSAllowsArbitraryLoads = true
-			},
+			UILaunchStoryboardName = "LaunchScreen",
+			CFBundleIdentifier = "com.appodeal.testing",
+			NSAppTransportSecurity = { NSAllowsArbitraryLoads=true },
+			CFBundleName = "Corona Appodeal",
 		},
 	},
 
-	tvos =
-	{
-		icon =
-		{
-			small =
-			{
-				"Icon-tvOS-Small-LogoA.png",
-				"Icon-tvOS-Small-LogoB.png",
-				"Icon-tvOS-Small-Background.png"
-			},
-			large =
-			{
-				"Icon-tvOS-Large-LogoA.png",
-				"Icon-tvOS-Large-LogoB.png",
-				"Icon-tvOS-Large-Background.png"
-			}
-		},
-		topShelfImage = "Icon-tvOS-TopShelf.png",
-		topShelfImageWide = "Icon-tvOS-TopShelfWide.png",
-		launchImage = "Icon-tvOS-Launch.png"
-	},
-
-	excludeFiles =
-	{
-		iphone = { "Icon-tvOS*.png" },
-		android = { "Icon-tvOS*.png" }
-	},
-
-	window =
-	{
-		titleText =
-		{
-			default = "Appodeal",
-		},
-	},
-
-	plugins =
-	{
-		["plugin.appodeal"] =
-        {
-            publisherId = "com.coronalabs"
-        }
-	},
+	plugins = {
+	
+		['plugin.appodeal.beta.base'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.AdColony'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.AmazonAds'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.AppLovin'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.Appnext'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.Chartboost'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.FacebookAudience'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.Flurry'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.GoogleAdMob'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.InMobi'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.IronSource'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.Mobvista'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.MyTarget'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.Ogury'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.StartApp'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.Tapjoy'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.TwitterMoPub'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.Unity'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.Vungle'] = { publisherId = 'com.coronalabs' },
+		['plugin.appodeal.beta.Yandex'] = { publisherId = 'com.coronalabs' }
+	}
 }
