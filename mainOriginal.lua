@@ -19,6 +19,7 @@ local platformName = system.getInfo("platformName")
 local appKey = nil
 local eventText = nil
 local adTypeText = nil
+local gdprResult = nil
 
 if platformName == "Android" then
 	if system.getInfo("targetAppStore") == "amazon" then
@@ -97,11 +98,22 @@ end
 
 print("Using: ", appKey)
 
+gdprResult = system.getPreference( "app", "result_gdpr", "boolean" )
+
+local hasUserConsent = false
+if gdprResult ~= nil then
+	if gdprResult == true then
+		hasUserConsent = gdprResult
+	end
+end
+
 appodeal.init(appodealListener, {
 	disableWriteExternalPermissionCheck = true,
 	appKey = appKey,
 	testMode = true,
 	bannerAnimation = true,
+	-- Please note, that this init parameter is available only on stable 2.3.3 or beta 2.4.1 versions of Appodeal SDK
+	hasUserConsent = hasUserConsent,
 	customRules = {
 		levels_played=5,
 		boss_mode=true,
